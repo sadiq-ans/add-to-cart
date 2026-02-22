@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Add To Cart - Using JS</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
+  <!-- Boxicons CSS -->
+  <link href='https://cdn.boxicons.com/3.0.6/fonts/basic/boxicons.min.css' rel='stylesheet'>
+  <link href='https://cdn.boxicons.com/3.0.6/fonts/brands/boxicons-brands.min.css' rel='stylesheet'>
+
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+<body>
+
+  <!-- ANNOUNCEMENT BAR -->
+  <section>
+    <div
+      class="announcement alert text-white alert-dismissible text-uppercase fade show text-center mb-0 rounded-0"
+      role="alert">
+      <strong>🔥 BUY 1 GET 1 FREE!</strong> Limited time offer – Shop now and save big!
+      <a href="#" class="text-white fw-bold text-decoration-underline ms-2">Shop Now</a>
+      <button type="button" class="btn-close btn-close-white" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+  </section>
+
+  <!-- HEADER -->
+  <section class="header">
+    <nav class="navbar navbar-expand-lg bg-white py-3 shadow-sm">
+      <div class="container">
+
+        <!-- Logo -->
+        <a class="navbar-brand text-uppercase" href="#">
+          NEW DAWN
+        </a>
+
+        <!-- Navbar content -->
+        <div class="collapse navbar-collapse" id="navbarContent">
+
+          <!-- Center menu -->
+          <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" href="#">HOME</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">ABOUT</a>
+            </li>
+            <li class="nav-item dropdown text-uppercase">
+              <a class="nav-link dropdown-toggle" href="#" id="shopDropdown" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                SHOP
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="shopDropdown">
+                <li><a class="dropdown-item" href="#">Women</a></li>
+                <li><a class="dropdown-item" href="#">Men</a></li>
+                <li><a class="dropdown-item" href="#">Accessories</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">BLOG</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">CONTACT</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="d-flex justify-content-center align-items-center gap-3">
+          <!-- Right icons -->
+          <div class="d-flex align-items-center">
+            <a href="#" class="nav-icon">
+              <i class="bi bi-search"></i>
+            </a>
+
+            <a href="#" class="nav-icon">
+              <i class="bi bi-person"></i>
+            </a>
+
+            <a href="./cart.html" class="nav-icon">
+              <i class="bi bi-cart"></i>
+              <span class="cart-badge" id="cart-count">0</span>
+            </a>
+          </div>
+
+          <!-- Toggle button -->
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+      </div>
+    </nav>
+  </section>
+
+  <!-- HERO -->
+  <section class="hero-section">
+    <div class="container">
+      <div class="hero-content text-white text-center text-uppercase">
+        <p>New Collection</p>
+        <h1>Inspired by Minimalist</h1>
+        <a href="#" class="btn btn-shop">VIEW COLLECTION</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRODUCTS CATEGORIES/ COLLECTION -->
+  <section class="collection-section container py-5">
+    <div class="row g-4">
+
+      <div class="container">
+        <h1 class="heading text-uppercase text-center my-5">Our aim: offer elegant, <br> timeless & functional products
+        </h1>
+      </div>
+
+      <!-- Men's -->
+      <div class="col-lg-4">
+        <div class="category-box">
+          <img src="https://alchemy-theme-clean.myshopify.com/cdn/shop/files/Legacy_Blue-02.jpg?v=1644857934&width=480"
+            alt="">
+          <div class="category-label">MEN'S</div>
+        </div>
+      </div>
+
+      <!-- Center Column -->
+      <div class="col-lg-4 d-flex flex-column gap-4">
+
+        <div class="category-box small">
+          <img src="https://themesflat.co/html/modaz/images/image-box/imgbox-3-576x300.jpg" alt="">
+          <div class="category-label">BAGPACK</div>
+        </div>
+
+        <div class="category-box small">
+          <img
+            src="https://prestige-theme-allure.myshopify.com/cdn/shop/files/Media_grid_-_accessories.jpg?v=1676473163&width=500"
+            alt="">
+          <div class="category-label">ACCESSORIES</div>
+        </div>
+
+      </div>
+
+      <!-- Women's -->
+      <div class="col-lg-4">
+        <div class="category-box">
+          <img
+            src="https://prestige-theme-allure.myshopify.com/cdn/shop/files/Media_grid_-_collection_shoulder_bags.jpg?v=1677590510&width=800"
+            alt="">
+          <div class="category-label">WOMEN'S</div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- OFFERS -->
+  <section>
+    <div class="marquee">
+      <div class="marquee-content">
+        BUY 1 GET 1 FREE | SPECIAL OFFER 🔥 BUY 1 GET 1 FREE | SPECIAL OFFER 🔥 BUY 1 GET 1 FREE | SPECIAL OFFER 🔥 BUY
+        1 GET 1 FREE | SPECIAL OFFER 🔥 BUY 1 GET 1 FREE | SPECIAL OFFER 🔥 BUY 1 GET 1 FREE | SPECIAL OFFER 🔥 BUY 1
+        GET 1 FREE | SPECIAL OFFER 🔥 BUY 1 GET 1 FREE | SPECIAL OFFER 🔥 BUY 1 GET 1 FREE | SPECIAL OFFER 🔥 BUY 1 GET
+        1 FREE | SPECIAL OFFER 🔥 BUY 1 GET 1 FREE | SPECIAL OFFER 🔥 BUY 1 GET 1 FREE | SPECIAL OFFER 🔥 BUY 1 GET 1
+        FREE | SPECIAL OFFER 🔥 BUY 1 GET 1 FREE | SPECIAL OFFER 🔥 BUY 1 GET 1 FREE
+      </div>
+    </div>
+  </section>
+
+  <!-- PRODUCTS/GALLERY -->
+  <section class="product-section py-5 bg-light">
+    <div class="container">
+      <h1 class="heading text-uppercase text-center my-5">Our best sellers</h1>
+      <div class="d-flex justify-content-center align-items-center mb-4">
+        <button class="btn text-uppercase btn-active mx-2" onclick="filterProducts('all')">All</button>
+        <button class="btn text-uppercase btn-categories mx-2" onclick="filterProducts('men')">Men</button>
+        <button class="btn text-uppercase btn-categories mx-2" onclick="filterProducts('women')">Women</button>
+        <button class="btn text-uppercase btn-categories mx-2"
+          onclick="filterProducts('accessories')">Accessories</button>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row gy-4" id="productRow">
+
+      </div>
+      <div class="container py-5 d-flex justify-content-center">
+        <a href="#" class="btn btn-shop text-uppercase">View More</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- OFFER -->
+  <section class="offer-section bg-white">
+    <div class="container-fluid">
+      <div class="row align-items-center">
+
+        <!-- Left Image -->
+        <div class="col-lg-6 image-side p-0">
+          <img
+            src="https://prestige-theme-allure.myshopify.com/cdn/shop/files/Images_with_text_scroll_-_Image_-_home_1.jpg?v=1680774758&width=880"
+            class="img-fluid" alt="Model">
+        </div>
+
+        <!-- Right Content -->
+        <div class="col-lg-6 text-side text-center text-lg-start">
+          <p class="subtitle text-uppercase">See What's New</p>
+
+          <h1 class="main-title">40% OFF</h1>
+
+          <h3 class="offer-text text-uppercase">
+            AW'26 Collection
+          </h3>
+
+          <a href="#" class="btn btn-shop text-uppercase">View Collection</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BLOG -->
+  <section class="py-5 bg-light">
+    <div class="container">
+      <div class="container">
+        <h1 class="heading text-uppercase text-center my-5">Latest Blog Posts</h1>
+      </div>
+
+      <div class="row g-4">
+        <!-- Blog Card -->
+        <div class="col-lg-4 col-md-6">
+          <div class="card blog-card">
+            <div class="position-relative">
+              <img
+                src="https://prestige-theme-allure.myshopify.com/cdn/shop/articles/Featured_image-_How_to_choose_your_business_bag.jpg?v=1679497250&width=1600"
+                class="card-img-top" alt="Blog Image">
+              <span class="blog-tag">#1</span>
+            </div>
+            <div class="card-body">
+              <small class="text-muted">12 Feb 2026</small>
+              <h5 class="card-title mt-2 text-capitalize">How to choose your bag</h5>
+              <p class="card-text text-muted">
+                Choosing the right bag involves balancing functionality with personal style, focusing on size, comfort,
+                and purpose.
+              </p>
+              <a href="#" class="btn btn-shop">Read More</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Blog Card -->
+        <div class="col-lg-4 col-md-6">
+          <div class="card blog-card">
+            <div class="position-relative">
+              <img
+                src="https://prestige-theme-allure.myshopify.com/cdn/shop/articles/Featured_image_-_A_day_in_Etretat.jpg?v=1679486958&width=1600"
+                class="card-img-top" alt="Blog Image">
+              <span class="blog-tag">#2</span>
+            </div>
+            <div class="card-body">
+              <small class="text-muted">05 Feb 2026</small>
+              <h5 class="card-title mt-2 text-capitalize">A shooting day in EUROPE</h5>
+              <p class="card-text text-muted">
+                A shooting day in Europe offers diverse experiences, ranging from high-adrenaline, urban range sessions
+                with automatic weapons to traditional,...
+              </p>
+              <a href="#" class="btn btn-shop">Read More</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Blog Card -->
+        <div class="col-lg-4 col-md-6">
+          <div class="card blog-card">
+            <div class="position-relative">
+              <img
+                src="https://prestige-theme-allure.myshopify.com/cdn/shop/articles/Featured_image_-_Focus_on_your_new_favorite__Le_Gianni.jpg?v=1679501378&width=1600"
+                class="card-img-top" alt="Blog Image">
+              <span class="blog-tag">#3</span>
+            </div>
+            <div class="card-body">
+              <small class="text-muted">28 Jan 2026</small>
+              <h5 class="card-title mt-2 text-capitalize">Focus on your new favorite</h5>
+              <p class="card-text text-muted">
+                Based on the latest 2026 fashion trends and product releases, the Bold Spirit bag refers to a versatile,
+                stylish collection...
+              </p>
+              <a href="#" class="btn btn-shop">Read More</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- FEATURE BAR -->
+  <div class="feature-section container-fluid feature-bar">
+    <div class="container">
+      <div class="row text-center gy-4">
+
+        <div class="col-12 col-md-3">
+          <div class="feature-item">
+            <div class="feature-icon"><i class="bx bx-package"></i></div>
+            <div class="feature-title">Free Delivery</div>
+            <div class="feature-text">Express Delivery Worldwide</div>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-3">
+          <div class="feature-item">
+            <div class="feature-icon"><i class="bx bx-refresh-cw-alt"></i></div>
+            <div class="feature-title text-capitalize">Free Return</div>
+            <div class="feature-text">The Internet Trend To Repeat</div>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-3">
+          <div class="feature-item">
+            <div class="feature-icon"><i class="bx bx-headphone-mic"></i></div>
+            <div class="feature-title text-capitalize">Available customer service</div>
+            <div class="feature-text">Connect via Whatsapp on +123 4656 789</div>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-3">
+          <div class="feature-item">
+            <div class="feature-icon"><i class="bx bx-clock"></i></div>
+            <div class="feature-title text-capitalize">We Are Open</div>
+            <div class="feature-text">7.00 AM – 11.00 PM</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- NEWSLETTER -->
+  <div class="newsletter-bar bg-light container-fluid py-4">
+    <div class="container">
+      <div class="row align-items-center">
+
+        <div class="col-lg-4 text-lg-start text-center mb-lg-0 mb-3">
+          <h5 class="newsletter-title">Sign up for Send Newsletter</h5>
+        </div>
+
+        <div class="col-lg-5 mb-lg-0 mb-3">
+          <div class="input-group newsletter-input">
+            <input type="email" class="form-control" placeholder="Your Email">
+            <button class="btn subscribe-btn">SUBCRIBE</button>
+          </div>
+        </div>
+
+        <div class="col-lg-3 text-lg-end text-center social-icons">
+          <a href="" target="_blank"><i class="bi bi-instagram"></i></a>
+          <a href="" target="_blank"><i class="bi bi-facebook"></i></a>
+          <a href="" target="_blank"><i class="bi bi-twitter-x"></i></a>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer-area mt-5">
+    <div class="container">
+      <div class="row py-5">
+
+        <!-- Column 1 -->
+        <div class="col-md-3 col-sm-6 mb-4">
+          <ul class="footer-list">
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Online Store</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 2 -->
+        <div class="col-md-3 col-sm-6 mb-4">
+          <ul class="footer-list">
+            <li><a href="#">Login / Register</a></li>
+            <li><a href="#">Your Cart</a></li>
+            <li><a href="#">Wishlist Items</a></li>
+            <li><a href="#">Your Checkout</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 3 -->
+        <div class="col-md-3 col-sm-6 mb-4">
+          <ul class="footer-list">
+            <li><a href="#">FAQs</a></li>
+            <li><a href="#">Term of Service</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Returns</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 4 -->
+        <div class="col-md-3 col-sm-6 mb-4">
+          <strong class="footer-logo text-uppercase">
+            NEW DAWN
+          </strong><sup style="font-size: 16px;">®</sup>
+          <p>112 Kingdom, NA 12, New York</p>
+          <p>+123 4656 789</p>
+          <p>info@newdawn.com</p>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Bottom Footer -->
+    <div class="footer-bottom text-center py-3">
+      <p class="mb-0">Copyright ©2026 <strong class="text-uppercase">NEW DAWN</strong><sup class="px-1"
+          style="font-size: 10px;">®</sup></p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="./assets/js/script.js"></script>
+
+</body>
+
+</html>
